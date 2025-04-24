@@ -4,7 +4,6 @@ import { toast } from "sonner";
 import { Calendar, Users, CalendarCheck, CalendarX } from "lucide-react";
 import { Navbar } from "@/components/hotel/Navbar";
 import { Footer } from "@/components/hotel/Footer";
-import { useScrollToTop } from "@/lib/hooks/useScrollToTop";
 
 export const BookingPage = () => {
   const [selectedRoom, setSelectedRoom] = useState("deluxe");
@@ -12,7 +11,6 @@ export const BookingPage = () => {
   const [checkOutDate, setCheckOutDate] = useState("");
   const [guests, setGuests] = useState("2");
   const navigate = useNavigate();
-  useScrollToTop();
   
   const handleRoomChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedRoom(e.target.value);

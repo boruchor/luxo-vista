@@ -3,7 +3,6 @@ import { useNavigate, Link } from "react-router-dom";
 import { Navbar } from "@/components/hotel/Navbar";
 import { Footer } from "@/components/hotel/Footer";
 import { Maximize2, Users, Coffee, Wifi, Bath, Users2, BedDouble } from "lucide-react";
-import { useScrollToTop } from "@/lib/hooks/useScrollToTop";
 
 const roomsData = [
   {
@@ -71,7 +70,6 @@ const roomsData = [
 export const RoomsPage = () => {
   const [filter, setFilter] = useState("all");
   const navigate = useNavigate();
-  useScrollToTop();
   
   const filteredRooms = filter === "all" 
     ? roomsData 

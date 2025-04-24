@@ -4,7 +4,6 @@ import { toast } from "sonner";
 import { Calendar, Users, CreditCard, Clock } from "lucide-react";
 import { Navbar } from "@/components/hotel/Navbar";
 import { Footer } from "@/components/hotel/Footer";
-import { useScrollToTop } from "@/lib/hooks/useScrollToTop";
 
 interface BookingDetails {
   room: string;
@@ -23,7 +22,6 @@ export const ConfirmBookingPage = () => {
   const [paymentMethod, setPaymentMethod] = useState("credit");
   const [nameOnCard, setNameOnCard] = useState("");
   const [loading, setLoading] = useState(false);
-  useScrollToTop();
 
   useEffect(() => {
     // Get booking details from location state
