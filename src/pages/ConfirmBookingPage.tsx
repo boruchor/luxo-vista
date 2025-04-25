@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { toast } from "sonner";
 import { Calendar, Users, CreditCard, Clock } from "lucide-react";
 import { Navbar } from "@/components/hotel/Navbar";
 import { Footer } from "@/components/hotel/Footer";
@@ -24,13 +23,11 @@ export const ConfirmBookingPage = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    // Get booking details from location state
     if (location.state) {
       setBookingDetails(location.state as BookingDetails);
     } else {
-      // No booking details, redirect to booking page
       navigate("/book");
-      toast.error("Please complete the booking form first");
+      console.error("Please complete the booking form first");
     }
   }, [location, navigate]);
 
@@ -61,13 +58,10 @@ export const ConfirmBookingPage = () => {
     e.preventDefault();
     setLoading(true);
     
-    // Simulate payment processing
     setTimeout(() => {
       setLoading(false);
-      // Generate a random booking reference
       const bookingRef = Math.random().toString(36).substring(2, 10).toUpperCase();
       
-      // Navigate to confirmation page
       navigate("/booking-confirmed", { 
         state: { 
           ...bookingDetails,
@@ -97,7 +91,6 @@ export const ConfirmBookingPage = () => {
             </div>
             
             <div className="grid md:grid-cols-5 gap-8 max-w-6xl mx-auto">
-              {/* Booking Summary */}
               <div className="md:col-span-2 bg-white rounded-xl shadow-md p-6">
                 <h2 className="font-serif text-2xl font-medium text-luxo-charcoal mb-4">Booking Summary</h2>
                 
@@ -148,7 +141,6 @@ export const ConfirmBookingPage = () => {
                 </div>
               </div>
               
-              {/* Payment Form */}
               <div className="md:col-span-3">
                 <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow-md p-6">
                   <h2 className="font-serif text-2xl font-medium text-luxo-charcoal mb-4">Payment Details</h2>

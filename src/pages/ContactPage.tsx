@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { toast } from "sonner";
 import { Navbar } from "@/components/hotel/Navbar";
 import { Footer } from "@/components/hotel/Footer";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
@@ -15,9 +14,8 @@ export const ContactPage = () => {
     e.preventDefault();
     setLoading(true);
     
-    // Simulate form submission
     setTimeout(() => {
-      toast.success("Your message has been sent. We'll respond shortly.");
+      console.error("Your message has been sent. We'll respond shortly.");
       setName("");
       setEmail("");
       setSubject("reservation");
@@ -30,7 +28,6 @@ export const ContactPage = () => {
     <>
       <Navbar />
       <div className="min-h-screen">
-        {/* Hero Section */}
         <section className="relative h-[50vh] bg-luxo-charcoal/95 overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center opacity-30"
@@ -44,11 +41,9 @@ export const ContactPage = () => {
           </div>
         </section>
 
-        {/* Contact Information */}
         <section className="py-16 bg-white">
           <div className="luxo-container">
             <div className="grid md:grid-cols-2 gap-12">
-              {/* Contact Form */}
               <div>
                 <h2 className="text-3xl font-serif font-bold text-luxo-charcoal mb-6">Send Us a Message</h2>
                 <p className="text-luxo-gray mb-8">
@@ -140,7 +135,6 @@ export const ContactPage = () => {
                 </form>
               </div>
               
-              {/* Contact Information */}
               <div>
                 <h2 className="text-3xl font-serif font-bold text-luxo-charcoal mb-6">Get in Touch</h2>
                 <p className="text-luxo-gray mb-8">
@@ -230,10 +224,8 @@ export const ContactPage = () => {
           </div>
         </section>
 
-        {/* Map */}
         <section className="py-10">
           <div className="h-96 w-full bg-luxo-gray-light">
-            {/* Replace with actual map integration if needed */}
             <div className="h-full w-full flex items-center justify-center bg-luxo-charcoal/10">
               <div className="text-center">
                 <h3 className="font-serif text-xl font-medium text-luxo-charcoal mb-2">LuxoVista Hotel</h3>

@@ -1,4 +1,3 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ScrollToTop } from "./components/ScrollToTop";
 import Index from "./pages/Index";
@@ -12,27 +11,22 @@ import BookingPage from "./pages/BookingPage";
 import ConfirmBookingPage from "./pages/ConfirmBookingPage";
 import BookingConfirmedPage from "./pages/BookingConfirmedPage";
 
-const queryClient = new QueryClient();
-
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <BrowserRouter>
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/rooms" element={<RoomsPage />} />
-        <Route path="/amenities" element={<AmenitiesPage />} />
-        <Route path="/gallery" element={<GalleryPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/book" element={<BookingPage />} />
-        <Route path="/confirm-booking" element={<ConfirmBookingPage />} />
-        <Route path="/booking-confirmed" element={<BookingConfirmedPage />} />
-        {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
-  </QueryClientProvider>
+  <BrowserRouter>
+    <ScrollToTop />
+    <Routes>
+      <Route path="/" element={<Index />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/rooms" element={<RoomsPage />} />
+      <Route path="/amenities" element={<AmenitiesPage />} />
+      <Route path="/gallery" element={<GalleryPage />} />
+      <Route path="/contact" element={<ContactPage />} />
+      <Route path="/book" element={<BookingPage />} />
+      <Route path="/confirm-booking" element={<ConfirmBookingPage />} />
+      <Route path="/booking-confirmed" element={<BookingConfirmedPage />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  </BrowserRouter>
 );
 
 export default App;

@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Navbar } from "@/components/hotel/Navbar";
 import { Footer } from "@/components/hotel/Footer";
 
-// Simple array of images
 const images = [
   {
     id: 1,
@@ -79,21 +78,17 @@ const images = [
 ];
 
 export default function GalleryPage() {
-  // Simple state for filter and selected image
   const [filter, setFilter] = useState("all");
   const [selectedImage, setSelectedImage] = useState(null);
 
-  // Filter images based on category
   const filteredImages = filter === "all" 
     ? images 
     : images.filter(img => img.category === filter);
 
-  // Handle image click
   const handleImageClick = (image) => {
     setSelectedImage(image);
   };
 
-  // Handle close lightbox
   const handleCloseLightbox = () => {
     setSelectedImage(null);
   };
@@ -102,7 +97,6 @@ export default function GalleryPage() {
     <div>
       <Navbar />
       
-      {/* Hero Section */}
       <div className="relative h-[60vh] overflow-hidden">
         <img
           src="/images/gallery/hero-bg.jpg"
@@ -122,9 +116,7 @@ export default function GalleryPage() {
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="container mx-auto px-4 py-12">
-        {/* Filter Buttons */}
         <div className="flex justify-center gap-4 mb-12">
           <button
             onClick={() => setFilter("all")}
@@ -160,7 +152,6 @@ export default function GalleryPage() {
           </button>
         </div>
 
-        {/* Image Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredImages.map((image) => (
             <div
@@ -183,7 +174,6 @@ export default function GalleryPage() {
           ))}
         </div>
 
-        {/* Lightbox */}
         {selectedImage && (
           <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50">
             <button
@@ -200,7 +190,6 @@ export default function GalleryPage() {
           </div>
         )}
 
-        {/* Call to Action */}
         <div className="mt-16 bg-purple-900 text-white rounded-lg p-8 md:p-12 text-center">
           <h2 className="text-3xl md:text-4xl font-serif mb-4">
             Want to Experience Our Hotel in Person?

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { toast } from "sonner";
 import { Calendar, Users, CalendarCheck, CalendarX } from "lucide-react";
 import { Navbar } from "@/components/hotel/Navbar";
 import { Footer } from "@/components/hotel/Footer";
@@ -20,17 +19,16 @@ export const BookingPage = () => {
     e.preventDefault();
     
     if (!checkInDate || !checkOutDate) {
-      toast.error("Please select both check-in and check-out dates");
+      console.error("Please select both check-in and check-out dates");
       return;
     }
     
-    // Calculate the price based on room type and days
     const checkIn = new Date(checkInDate);
     const checkOut = new Date(checkOutDate);
     const dayDiff = Math.ceil((checkOut.getTime() - checkIn.getTime()) / (1000 * 60 * 60 * 24));
     
     if (dayDiff <= 0) {
-      toast.error("Check-out date must be after check-in date");
+      console.error("Check-out date must be after check-in date");
       return;
     }
     
@@ -39,7 +37,6 @@ export const BookingPage = () => {
     
     const totalPrice = basePrice * dayDiff;
     
-    // Navigate to confirmation page with booking details
     navigate("/confirm-booking", { 
       state: { 
         room: selectedRoom, 

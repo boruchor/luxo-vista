@@ -2,7 +2,6 @@
 import React from "react";
 import { Navbar } from "@/components/hotel/Navbar";
 import { Footer } from "@/components/hotel/Footer";
-import { Award, Clock, Globe, Users } from "lucide-react";
 import { FC } from "react";
 
 export const AboutPage: FC = () => {

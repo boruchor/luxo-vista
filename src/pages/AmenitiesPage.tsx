@@ -130,7 +130,6 @@ export const AmenitiesPage = () => {
           </div>
         </section>
 
-        {/* Highlighted Amenities */}
         <section className="py-20 bg-white">
           <div className="luxo-container">
             <div className="text-center mb-16">
@@ -202,7 +201,6 @@ export const AmenitiesPage = () => {
           </div>
         </section>
 
-        {/* Personalized Service */}
         <section className="py-20 bg-white">
           <div className="luxo-container text-center">
             <h2 className="text-3xl font-serif font-bold text-luxo-charcoal mb-4">Personalized Service</h2>
