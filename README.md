@@ -1,5 +1,7 @@
 # LuxoVista Hotel Website
 
+[Live Demo](https://boruchor.github.io/luxo-vista)
+
 A modern, responsive hotel website built with React and TypeScript.
 
 ## Tech Stack
