@@ -15,7 +15,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: '/luxo-vista/',
+  base: './',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
