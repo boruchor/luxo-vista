@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useLocation, useNavigate, Link } from "react-router-dom";
 import { CheckCircle, Calendar, Users, Home, Phone } from "lucide-react";
-import { Navbar } from "@/components/hotel/Navbar";
-import { Footer } from "@/components/hotel/Footer";
+import { Navbar } from "../components/hotel/Navbar";
+import { Footer } from "../components/hotel/Footer";
 
 interface ConfirmedBookingDetails {
   room: string;
