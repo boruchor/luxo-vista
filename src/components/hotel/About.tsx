@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { getImagePath } from "../../lib/utils";
 
 export function About() {
   const textRef = useRef(null);
@@ -60,14 +61,14 @@ export function About() {
             <div className="space-y-4">
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <img 
-                  src="/images/gallery/hotel-facade.jpg" 
+                  src={getImagePath("/images/gallery/hotel-facade.jpg")} 
                   alt="Hotel exterior architecture" 
                   className="w-full h-80 object-cover"
                 />
               </div>
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <img 
-                  src="/images/gallery/rooftop-lounge.jpg" 
+                  src={getImagePath("/images/gallery/rooftop-lounge.jpg")} 
                   alt="Luxury hotel room" 
                   className="w-full h-48 object-cover"
                 />
@@ -76,14 +77,14 @@ export function About() {
             <div className="space-y-4 mt-8">
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <img 
-                  src="/images/gallery/celestial-spa.jpg" 
+                  src={getImagePath("/images/gallery/celestial-spa.jpg")} 
                   alt="Luxury spa" 
                   className="w-full h-48 object-cover"
                 />
               </div>
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <img 
-                  src="/images/gallery/pool-area.jpg" 
+                  src={getImagePath("/images/gallery/pool-area.jpg")} 
                   alt="Hotel swimming pool" 
                   className="w-full h-80 object-cover"
                 />

@@ -1,27 +1,28 @@
 import { useState, useEffect } from "react";
+import { getImagePath } from "../../lib/utils";
 
 const slides = [
   {
     id: 1,
-    imageUrl: "/images/gallery/hero-bg.jpg",
+    imageUrl: getImagePath("/images/gallery/hero-bg.jpg"),
     title: "Experience Ultimate Luxury",
     subtitle: "Where Modern Design Meets Timeless Elegance"
   },
   {
     id: 2,
-    imageUrl: "/images/gallery/aurora-restaurant.jpg",
+    imageUrl: getImagePath("/images/gallery/aurora-restaurant.jpg"),
     title: "Exquisite Culinary Journey",
     subtitle: "Savor Our Michelin-Starred Creations"
   },
   {
     id: 3,
-    imageUrl: "/images/gallery/premium-suite.jpg",
+    imageUrl: getImagePath("/images/gallery/premium-suite.jpg"),
     title: "Personalized Sanctuary",
     subtitle: "Your Private Retreat In The Heart Of Luxury"
   },
   {
     id: 4,
-    imageUrl: "/images/gallery/celestial-spa.jpg",
+    imageUrl: getImagePath("/images/gallery/celestial-spa.jpg"),
     title: "Wellness & Rejuvenation",
     subtitle: "Discover Inner Peace in Our Luxurious Spa"
   }
