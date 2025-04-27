@@ -15,25 +15,25 @@ declare global {
 const galleryImages = [
   {
     id: 1,
-    url: "/images/gallery/hero-bg.jpg",
+    url: "/images/hotel/feature-1.jpg",
     title: "Hotel Exterior",
     category: "exterior"
   },
   {
     id: 2,
-    url: "/images/gallery/aurora-restaurant.jpg",
+    url: "/images/hotel/feature-2.jpg",
     title: "Aurora Restaurant",
     category: "dining"
   },
   {
     id: 3,
-    url: "/images/gallery/premium-suite.jpg",
+    url: "/images/hotel/feature-3.jpg",
     title: "Premium Suite",
     category: "rooms"
   },
   {
     id: 4,
-    url: "/images/gallery/celestial-spa.jpg",
+    url: "/images/hotel/feature-4.jpg",
     title: "Celestial Spa",
     category: "spa"
   },
