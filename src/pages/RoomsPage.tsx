@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { Navbar } from "@/components/hotel/Navbar";
-import { Footer } from "@/components/hotel/Footer";
+import { Navbar } from "../components/hotel/Navbar";
+import { Footer } from "../components/hotel/Footer";
+import { Rooms } from "../components/hotel/Rooms";
 import { Maximize2, Users, Coffee, Wifi, Bath, Users2, BedDouble } from "lucide-react";
 
 const roomsData = [
@@ -87,113 +88,21 @@ export const RoomsPage = () => {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-white">
-        <div className="relative h-[60vh] overflow-hidden">
-          <div className="absolute inset-0">
-            <img
-              src="/images/gallery/premium-suite.jpg"
-              alt="Luxury Hotel Room"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black/50" />
-          </div>
-          <div className="relative h-full flex items-center justify-center text-center">
-            <div className="max-w-3xl px-4">
-              <h1 className="text-5xl md:text-6xl font-bold text-white font-serif mb-6">
-                Luxurious Accommodations
-              </h1>
-              <p className="text-xl text-white/80">
-                Experience unparalleled comfort in our meticulously designed rooms and suites
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="luxo-container py-12">
-          <div className="flex flex-col md:flex-row gap-8 mb-12">
-            <div className="w-full md:w-1/4">
-              <div className="sticky top-24 space-y-6">
-                <div>
-                  <label className="block text-sm font-medium mb-2">Room Type</label>
-                  <select className="w-full border rounded-md p-2">
-                    <option>All Types</option>
-                    <option>Standard Room</option>
-                    <option>Deluxe Suite</option>
-                    <option>Presidential Suite</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Price Range</label>
-                  <select className="w-full border rounded-md p-2">
-                    <option>All Prices</option>
-                    <option>$200 - $500</option>
-                    <option>$500 - $1000</option>
-                    <option>$1000+</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <div className="w-full md:w-3/4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {filteredRooms.map((room) => (
-                  <div key={room.id} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                    <div className="relative h-64">
-                      <img
-                        src={room.image}
-                        alt={room.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="p-6">
-                      <div className="flex justify-between items-start mb-4">
-                        <h3 className="text-2xl font-serif">{room.name}</h3>
-                        <p className="text-luxo-gold font-medium">${room.price}/night</p>
-                      </div>
-                      <p className="text-gray-600 mb-4">{room.description}</p>
-                      <div className="flex flex-wrap gap-4 mb-6">
-                        <div className="flex items-center gap-2">
-                          <Maximize2 className="w-5 h-5" />
-                          <span>{room.size}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Users className="w-5 h-5" />
-                          <span>{room.capacity}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Bath className="w-5 h-5" />
-                          <span>En-suite bathroom</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Wifi className="w-5 h-5" />
-                          <span>High-speed WiFi</span>
-                        </div>
-                      </div>
-                      <Link 
-                        to="/book"
-                        className="w-full luxo-btn-primary"
-                      >
-                        Book Now
-                      </Link>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-luxo-purple-dark text-white rounded-lg p-8 md:p-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-serif mb-4">
-              Need Help Finding the Perfect Room?
-            </h2>
-            <p className="text-white/80 mb-6 max-w-2xl mx-auto">
-              Our concierge team is here to assist you in selecting the perfect accommodation for your stay
+      <div className="min-h-screen">
+        <section className="relative h-[50vh] bg-luxo-charcoal/95 overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center opacity-30"
+            style={{ backgroundImage: "url('/images/rooms/hero-bg.jpg')" }}
+          ></div>
+          <div className="relative luxo-container h-full flex flex-col justify-center items-center text-center">
+            <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6">Our Rooms</h1>
+            <p className="text-lg md:text-xl text-white/80 max-w-2xl">
+              Experience unparalleled luxury in our meticulously designed accommodations
             </p>
-            <button className="luxo-btn-outline text-white border-white">
-              Contact Concierge
-            </button>
           </div>
-        </div>
+        </section>
+
+        <Rooms />
       </div>
       <Footer />
     </>
