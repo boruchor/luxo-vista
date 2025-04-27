@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Users2, Maximize2, BedDouble } from "lucide-react";
-import { cn, getImagePath } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 
 const rooms = [
@@ -9,7 +9,7 @@ const rooms = [
     name: "Deluxe Suite",
     description: "Experience unparalleled luxury in our spacious deluxe suite featuring panoramic city views, a private balcony, and exclusive amenities.",
     price: "$450",
-    imageUrl: getImagePath("/images/gallery/deluxe-suite.jpg"),
+    imageUrl: "/images/gallery/deluxe-suite.jpg",
     size: "45m²",
     guests: "2 Adults",
     bed: "King Size",
@@ -20,7 +20,7 @@ const rooms = [
     name: "Premium Suite",
     description: "Our most exclusive accommodations with separate living spaces, a personal concierge service, and extraordinary attention to every detail.",
     price: "$750",
-    imageUrl: getImagePath("/images/gallery/premium-suite.jpg"),
+    imageUrl: "/images/gallery/premium-suite.jpg",
     size: "75m²",
     guests: "3 Adults",
     bed: "King Size + Sofa Bed",
@@ -31,7 +31,7 @@ const rooms = [
     name: "Executive Room",
     description: "Designed with the business traveler in mind, our executive rooms combine functionality with luxury for the perfect stay.",
     price: "$350",
-    imageUrl: getImagePath("/images/gallery/executive-room.jpg"),
+    imageUrl: "/images/gallery/executive-room.jpg",
     size: "35m²",
     guests: "2 Adults",
     bed: "Queen Size",
