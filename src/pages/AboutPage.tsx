@@ -1,8 +1,9 @@
 /** @jsxImportSource @emotion/react */
 import React from "react";
-import { Navbar } from "@/components/hotel/Navbar";
-import { Footer } from "@/components/hotel/Footer";
+import { Navbar } from "../components/hotel/Navbar";
+import { Footer } from "../components/hotel/Footer";
 import { FC } from "react";
+import { getImagePath } from "../lib/utils";
 
 export const AboutPage: FC = () => {
   return (
@@ -42,7 +43,7 @@ export const AboutPage: FC = () => {
               </div>
               <div className="relative h-[400px] rounded-xl overflow-hidden">
                 <img 
-                  src="/images/about/story-image.jpg" 
+                  src={getImagePath("/images/about/story-image.jpg")} 
                   alt="LuxoVista Legacy" 
                   className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -88,7 +89,7 @@ export const AboutPage: FC = () => {
               <div className="text-center">
                 <div className="relative w-48 h-48 mx-auto mb-6">
                   <img 
-                    src="/images/about/team-1.jpg" 
+                    src={getImagePath("/images/about/team-1.jpg")} 
                     alt="Sarah Chen - Chief Executive Officer" 
                     className="w-full h-full object-cover rounded-full"
                   />
@@ -102,7 +103,7 @@ export const AboutPage: FC = () => {
               <div className="text-center">
                 <div className="relative w-48 h-48 mx-auto mb-6">
                   <img 
-                    src="/images/about/team-2.jpg" 
+                    src={getImagePath("/images/about/team-2.jpg")} 
                     alt="Michael Rodriguez - Operations Director" 
                     className="w-full h-full object-cover rounded-full"
                   />
@@ -116,7 +117,7 @@ export const AboutPage: FC = () => {
               <div className="text-center">
                 <div className="relative w-48 h-48 mx-auto mb-6">
                   <img 
-                    src="/images/about/team-3.jpg" 
+                    src={getImagePath("/images/about/team-3.jpg")} 
                     alt="Emma Thompson - Guest Experience Director" 
                     className="w-full h-full object-cover rounded-full"
                   />

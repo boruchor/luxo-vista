@@ -1,7 +1,7 @@
 /** @jsxImportSource react */
 import * as React from "react";
 import { useState } from "react";
-import { cn } from "@/lib/utils";
+import { cn, getImagePath } from "@/lib/utils";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 declare global {
@@ -15,73 +15,73 @@ declare global {
 const galleryImages = [
   {
     id: 1,
-    url: "/images/gallery/hero-bg.jpg",
+    url: getImagePath("/images/gallery/hero-bg.jpg"),
     title: "Hotel Exterior",
     category: "exterior"
   },
   {
     id: 2,
-    url: "/images/gallery/aurora-restaurant.jpg",
+    url: getImagePath("/images/gallery/aurora-restaurant.jpg"),
     title: "Aurora Restaurant",
     category: "dining"
   },
   {
     id: 3,
-    url: "/images/gallery/premium-suite.jpg",
+    url: getImagePath("/images/gallery/premium-suite.jpg"),
     title: "Premium Suite",
     category: "rooms"
   },
   {
     id: 4,
-    url: "/images/gallery/celestial-spa.jpg",
+    url: getImagePath("/images/gallery/celestial-spa.jpg"),
     title: "Celestial Spa",
     category: "spa"
   },
   {
     id: 5,
-    url: "/images/gallery/deluxe-suite.jpg",
+    url: getImagePath("/images/gallery/deluxe-suite.jpg"),
     title: "Deluxe Suite",
     category: "rooms"
   },
   {
     id: 6,
-    url: "/images/gallery/pool-area.jpg",
+    url: getImagePath("/images/gallery/pool-area.jpg"),
     title: "Infinity Pool",
     category: "amenities"
   },
   {
     id: 7,
-    url: "/images/gallery/breakfast-buffet.jpg",
+    url: getImagePath("/images/gallery/breakfast-buffet.jpg"),
     title: "Breakfast Buffet",
     category: "dining"
   },
   {
     id: 8,
-    url: "/images/gallery/garden-view.jpg",
+    url: getImagePath("/images/gallery/garden-view.jpg"),
     title: "Garden View",
     category: "exterior"
   },
   {
     id: 9,
-    url: "/images/gallery/family-suite.jpg",
+    url: getImagePath("/images/gallery/family-suite.jpg"),
     title: "Family Suite",
     category: "rooms"
   },
   {
     id: 10,
-    url: "/images/gallery/treatment-room.jpg",
+    url: getImagePath("/images/gallery/treatment-room.jpg"),
     title: "Treatment Room",
     category: "spa"
   },
   {
     id: 11,
-    url: "/images/gallery/rooftop-lounge.jpg",
+    url: getImagePath("/images/gallery/rooftop-lounge.jpg"),
     title: "Rooftop Lounge",
     category: "amenities"
   },
   {
     id: 12,
-    url: "/images/gallery/executive-room.jpg",
+    url: getImagePath("/images/gallery/executive-room.jpg"),
     title: "Executive Room",
     category: "rooms"
   }
