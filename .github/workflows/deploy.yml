@@ -19,6 +19,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
+          cache: 'npm'
 
       - name: Install Dependencies
         run: npm install
@@ -26,10 +27,14 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Move dist contents
+        run: |
+          cp -r dist/* .
+          rm -rf dist
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: gh-pages
+          publish_dir: .
           force_orphan: true 
