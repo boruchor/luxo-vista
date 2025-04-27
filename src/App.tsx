@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { ScrollToTop } from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
@@ -12,7 +12,7 @@ import ConfirmBookingPage from "./pages/ConfirmBookingPage";
 import BookingConfirmedPage from "./pages/BookingConfirmedPage";
 
 const App = () => (
-  <BrowserRouter>
+  <HashRouter>
     <ScrollToTop />
     <Routes>
       <Route path="/" element={<Index />} />
@@ -26,7 +26,7 @@ const App = () => (
       <Route path="/booking-confirmed" element={<BookingConfirmedPage />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 );
 
 export default App;
