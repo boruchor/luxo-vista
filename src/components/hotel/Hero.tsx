@@ -3,25 +3,25 @@ import { useState, useEffect } from "react";
 const slides = [
   {
     id: 1,
-    imageUrl: "luxo-vista/images/gallery/hero-bg.jpg",
+    imageUrl: "/images/gallery/hero-bg.jpg",
     title: "Experience Ultimate Luxury",
     subtitle: "Where Modern Design Meets Timeless Elegance"
   },
   {
     id: 2,
-    imageUrl: "luxo-vista/images/gallery/aurora-restaurant.jpg",
+    imageUrl: "/images/gallery/aurora-restaurant.jpg",
     title: "Exquisite Culinary Journey",
     subtitle: "Savor Our Michelin-Starred Creations"
   },
   {
     id: 3,
-    imageUrl: "luxo-vista/images/gallery/premium-suite.jpg",
+    imageUrl: "/images/gallery/premium-suite.jpg",
     title: "Personalized Sanctuary",
     subtitle: "Your Private Retreat In The Heart Of Luxury"
   },
   {
     id: 4,
-    imageUrl: "luxo-vista/images/gallery/celestial-spa.jpg",
+    imageUrl: "/images/gallery/celestial-spa.jpg",
     title: "Wellness & Rejuvenation",
     subtitle: "Discover Inner Peace in Our Luxurious Spa"
   }

@@ -15,73 +15,73 @@ declare global {
 const galleryImages = [
   {
     id: 1,
-    url: "luxo-vista/images/hotel/feature-1.jpg",
+    url: "images/gallery/feature-1.jpg",
     title: "Hotel Exterior",
     category: "exterior"
   },
   {
     id: 2,
-    url: "luxo-vista/images/hotel/feature-2.jpg",
+    url: "images/gallery/feature-2.jpg",
     title: "Aurora Restaurant",
     category: "dining"
   },
   {
     id: 3,
-    url: "luxo-vista/images/hotel/feature-3.jpg",
+    url: "images/gallery/feature-3.jpg",
     title: "Premium Suite",
     category: "rooms"
   },
   {
     id: 4,
-    url: "luxo-vista/images/hotel/feature-4.jpg",
+    url: "images/gallery/feature-4.jpg",
     title: "Celestial Spa",
     category: "spa"
   },
   {
     id: 5,
-    url: "luxo-vista/images/gallery/deluxe-suite.jpg",
+    url: "images/gallery/deluxe-suite.jpg",
     title: "Deluxe Suite",
     category: "rooms"
   },
   {
     id: 6,
-    url: "luxo-vista/images/gallery/pool-area.jpg",
+    url: "images/gallery/pool-area.jpg",
     title: "Infinity Pool",
     category: "amenities"
   },
   {
     id: 7,
-    url: "luxo-vista/images/gallery/breakfast-buffet.jpg",
+    url: "images/gallery/breakfast-buffet.jpg",
     title: "Breakfast Buffet",
     category: "dining"
   },
   {
     id: 8,
-    url: "luxo-vista/images/gallery/garden-view.jpg",
+    url: "images/gallery/garden-view.jpg",
     title: "Garden View",
     category: "exterior"
   },
   {
     id: 9,
-    url: "luxo-vista/images/gallery/family-suite.jpg",
+    url: "images/gallery/family-suite.jpg",
     title: "Family Suite",
     category: "rooms"
   },
   {
     id: 10,
-    url: "luxo-vista/images/gallery/treatment-room.jpg",
+    url: "images/gallery/treatment-room.jpg",
     title: "Treatment Room",
     category: "spa"
   },
   {
     id: 11,
-    url: "luxo-vista/images/gallery/rooftop-lounge.jpg",
+    url: "images/gallery/rooftop-lounge.jpg",
     title: "Rooftop Lounge",
     category: "amenities"
   },
   {
     id: 12,
-    url: "luxo-vista/images/gallery/executive-room.jpg",
+    url: "images/gallery/executive-room.jpg",
     title: "Executive Room",
     category: "rooms"
   }

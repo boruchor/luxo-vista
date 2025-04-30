@@ -81,7 +81,6 @@ export const BookingConfirmedPage = () => {
                 
                 <div className="border-b pb-6 mb-6">
                   <h2 className="font-serif text-xl font-medium mb-4">Stay Details</h2>
-                  
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div className="flex gap-3">
                       <Home className="w-5 h-5 text-luxo-purple mt-1 flex-shrink-0" />
@@ -138,7 +137,6 @@ export const BookingConfirmedPage = () => {
                   <p className="text-luxo-gray mb-4">
                     If you have any questions about your reservation, please contact our concierge team:
                   </p>
-                  
                   <div className="flex items-center gap-2 text-luxo-purple">
                     <Phone className="h-5 w-5" />
                     <span>+1 (888) 555-0123</span>
